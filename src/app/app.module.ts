@@ -8,6 +8,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from 'src/services/login.service';
+import { StorageService } from 'src/services/storage.service';
+import { AutorService } from 'src/services/autor.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   providers: [
     StatusBar,
     SplashScreen,
+    LoginService,
+    StorageService,
+    AutorService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

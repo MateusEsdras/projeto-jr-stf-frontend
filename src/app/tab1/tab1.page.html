@@ -1,2 +1,21 @@
 <ion-content>
+    <ion-list>
+        <ion-card button *ngFor="let autor of autores; let i = index">
+            <ion-card-header>
+                <ion-card-title>{{autor.nome}}</ion-card-title>
+                <h6>{{autor.paisOrigem}}</h6>
+            </ion-card-header>
+            
+            <ion-card-content>
+                <ion-item *ngFor="let obra of autor.obras" lines="full">
+                    <ion-label>
+                        <h5>{{obra.nome}}</h5>
+                        <h5>{{obra.descricao}}</h5>
+                        <h5 *ngIf="obra.publicacao">{{obra.publicacao}}</h5>
+                        <h5 *ngIf="obra.exibicao">{{obra.exibicao}}</h5>
+                    </ion-label>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
 </ion-content>

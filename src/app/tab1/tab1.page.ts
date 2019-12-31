@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AutorService } from 'src/services/autor.service';
+import { Autor } from 'src/model/autor';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  autores: Autor[];
 
+  constructor(
+    private autorService: AutorService) {
+  }
+
+  ngOnInit(){
+    this.loadAutores();
+  }
+
+  loadAutores(){
+    this.autorService.findAll().subscribe(
+      response => {
+        console.log(response);
+        this.autores = response;
+      },
+      error => {}
+    )
+  }
 }
