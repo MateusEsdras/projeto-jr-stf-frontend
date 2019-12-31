@@ -30,6 +30,7 @@ export class LoginPage implements OnInit {
   }
 
   login(){
+    this.credenciais = this.formGroup.value;
     this.nav.navigateForward("/tabs/tab1");
   }
 
