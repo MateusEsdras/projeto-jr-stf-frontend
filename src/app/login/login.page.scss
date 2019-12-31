@@ -1,0 +1,25 @@
+.center{
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 70%;
+}
+form{
+    padding: 20px;
+}
+ion-button{
+    display: block;
+}
+ion-item:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ion-item:nth-child(2) {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+ion-item {
+    --background: rgba(237, 229, 245, 0.8);
+    margin-bottom: 1px;
+}

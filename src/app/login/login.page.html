@@ -1,0 +1,20 @@
+<ion-content class="ion-padding">
+  <ion-img src="assets/icon/book-icon.png" class="center"></ion-img>
+
+  <form [formGroup]="formGroup" (ngSubmit)="login(); $event.preventDefault()">
+    <ion-col class="ion-align-self-center">
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input [(ngModel)]="credenciais.email" formControlName="email" type="text" name="email" inputmode="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Senha</ion-label>
+        <ion-input [(ngModel)]="credenciais.senha" formControlName="senha" type="password" name="senha" inputmode="password"></ion-input>
+      </ion-item>
+      &nbsp;
+      <ion-button expand="block" type="submit" [disabled]="formGroup.invalid">Login</ion-button>
+      <ion-button expand="block" (click)="signUp()">Cadastre-se</ion-button>
+    </ion-col>
+  </form>
+
+</ion-content>
